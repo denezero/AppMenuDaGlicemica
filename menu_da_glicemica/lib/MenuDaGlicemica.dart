@@ -28,9 +28,7 @@ class MenuDaGlicemicaState extends State<MenuDaGlicemica> {
       // drawer: ,
 
       //corpo do app
-      body: ListView(
-        addAutomaticKeepAlives: false,
-        cacheExtent: 100.0,
+      body: PageView(
         children: [
           
           Detalhe(),
