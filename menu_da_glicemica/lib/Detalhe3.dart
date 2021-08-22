@@ -9,13 +9,12 @@ class Detalhe3 extends StatelessWidget {
   final String nomeReceita = "Delícia de abobrinha";
   final String tempoPreparo = "40 MINUTOS";
   final String rendimento = "24 Unidades";
-  final String numeroFavoritos = "3.453";
-  final String numeroComments = "456";
+
 
 
   @override
   Widget build(BuildContext context){
-    return Column(
+    return ListView(
       children: [
         //foto
         new Image.asset(foto),
@@ -40,7 +39,7 @@ class Detalhe3 extends StatelessWidget {
 
 
           new Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               //preparo
               new Column(
@@ -52,7 +51,7 @@ class Detalhe3 extends StatelessWidget {
                   ),
 
 
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
 
               new Text(
                   "Preparo",
@@ -63,7 +62,7 @@ class Detalhe3 extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: 10),
+              SizedBox(height: 5),
 
               new Text(
                 tempoPreparo,
@@ -86,7 +85,7 @@ class Detalhe3 extends StatelessWidget {
                   ),
 
 
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
 
               new Text(
                   "Rendimento",
@@ -96,7 +95,7 @@ class Detalhe3 extends StatelessWidget {
                   fontWeight: FontWeight.w600),
                 ),
 
-                SizedBox(height: 10),
+                SizedBox(height: 5),
 
                  
               new Text(
@@ -110,71 +109,9 @@ class Detalhe3 extends StatelessWidget {
               ),
 
               // favoritos?
-              new Column(
-                children: [
-                  new FaIcon(
-                    FontAwesomeIcons.solidHeart,
-                    color: Colors.pinkAccent.shade200,
-                    size: 32,
-                  ),
-
-                  SizedBox(height: 10),
-
-                new Text(
-                  "Favoritos",
-                  style: new TextStyle(
-                    color: Colors.black,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600),
-                ),
-
-                SizedBox(height: 10),
-
-                 
-              new Text(
-                numeroFavoritos,
-                style: new TextStyle(
-                  color: Colors.black,
-                  fontSize: 16
-                ),
-
-              ),
-                ],
-              ),
-
-              //comments
-              new Column(
-                children: [
-                  new FaIcon(
-                    FontAwesomeIcons.comment,
-                    color: Colors.blueAccent.shade700,
-                    size: 32,
-                  ),
-
-                  SizedBox(height: 10),
-
-                  new Text(
-                    "Comentários",
-                    style: new TextStyle(
-                      color: Colors.black,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600),
-                  ),
-
-                SizedBox(height: 10),
-
-                 
-              new Text(
-                numeroComments,
-                style: new TextStyle(
-                  color: Colors.black,
-                  fontSize: 16
-                ),
-
-              )
               
-            ],
-              )
+
+              
 
           ],
           )
@@ -223,14 +160,13 @@ class Detalhe3 extends StatelessWidget {
               // Lista de Ingredientes
               new Container(
                 padding: EdgeInsets.all(20),
-                child: new Text(" - 2 abobrinhas médias\n" +
-                    " - 200 g de ricota amassada com o garfo\n" +
-                    " - 1 ovo\n" +
-                    " - 2 colheres (sopa) de cheiro-verde picado\n" +
-                    " - 1 pote de iogurte natural desnatado\n" +
-                    " - 1 xícara (chá) de farinha de trigo\n" +
-                    " - 1 colher (chá) de fermento em pó\n" +
-                    " - 2 colheres (chá) de azeite de oliva\n",
+                child: new Text("- 2 abobrinhas médias\n" +
+"- 200 g de ricota amassada com o garfo\n" +
+"- 1 ovo\n" +
+"- 2 colheres (sopa) de cheiro-verde picado\n" +
+"- 1 pote de iogurte natural desnatado\n" +"- 1 xícara (chá) de farinha de trigo\n" +
+"- 1 colher (chá) de fermento em pó\n" +
+"- 2 colheres (chá) de azeite de oliva\n",
 
                   style: new TextStyle(
                     fontSize: 18
@@ -280,7 +216,6 @@ class Detalhe3 extends StatelessWidget {
           )
         ),
 
-        new SizedBox(height: 50),
       ],
     );
   }
