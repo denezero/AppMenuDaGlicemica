@@ -9,13 +9,12 @@ class Detalhe extends StatelessWidget {
   final String nomeReceita = "Bolo de abacaxi e castanha-de-caju";
   final String tempoPreparo = "50 MINUTOS";
   final String rendimento = "12 Porções";
-  final String numeroFavoritos = "1.235";
-  final String numeroComments = "253";
+
 
 
   @override
   Widget build(BuildContext context){
-    return Column(
+    return ListView(
       children: [
         //foto
         new Image.asset(foto),
@@ -40,7 +39,7 @@ class Detalhe extends StatelessWidget {
 
 
           new Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               //preparo
               new Column(
@@ -52,7 +51,7 @@ class Detalhe extends StatelessWidget {
                   ),
 
 
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
 
               new Text(
                   "Preparo",
@@ -63,7 +62,7 @@ class Detalhe extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: 10),
+              SizedBox(height: 5),
 
               new Text(
                 tempoPreparo,
@@ -86,7 +85,7 @@ class Detalhe extends StatelessWidget {
                   ),
 
 
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
 
               new Text(
                   "Rendimento",
@@ -96,7 +95,7 @@ class Detalhe extends StatelessWidget {
                   fontWeight: FontWeight.w600),
                 ),
 
-                SizedBox(height: 10),
+                SizedBox(height: 5),
 
                  
               new Text(
@@ -110,71 +109,9 @@ class Detalhe extends StatelessWidget {
               ),
 
               // favoritos?
-              new Column(
-                children: [
-                  new FaIcon(
-                    FontAwesomeIcons.solidHeart,
-                    color: Colors.pinkAccent.shade200,
-                    size: 32,
-                  ),
-
-                  SizedBox(height: 10),
-
-                new Text(
-                  "Favoritos",
-                  style: new TextStyle(
-                    color: Colors.black,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600),
-                ),
-
-                SizedBox(height: 10),
-
-                 
-              new Text(
-                numeroFavoritos,
-                style: new TextStyle(
-                  color: Colors.black,
-                  fontSize: 16
-                ),
-
-              ),
-                ],
-              ),
-
-              //comments
-              new Column(
-                children: [
-                  new FaIcon(
-                    FontAwesomeIcons.comment,
-                    color: Colors.blueAccent.shade700,
-                    size: 32,
-                  ),
-
-                  SizedBox(height: 10),
-
-                  new Text(
-                    "Comentários",
-                    style: new TextStyle(
-                      color: Colors.black,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600),
-                  ),
-
-                SizedBox(height: 10),
-
-                 
-              new Text(
-                numeroComments,
-                style: new TextStyle(
-                  color: Colors.black,
-                  fontSize: 16
-                ),
-
-              )
               
-            ],
-              )
+
+              
 
           ],
           )
@@ -289,7 +226,6 @@ class Detalhe extends StatelessWidget {
           )
         ),
 
-        new SizedBox(height: 50),
       ],
     );
   }
